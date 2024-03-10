@@ -1,3 +1,4 @@
+import AboutMe from './components/AboutMe';
 import Title from './components/Title';
 
 const App = () => {
@@ -5,7 +6,8 @@ const App = () => {
 
   return (
     <div>
-      <Title />            
+      <Title />
+      <AboutMe />       
     </div>
       
   )

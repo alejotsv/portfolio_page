@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .main-title-container {
   display: flex;
   align-items: center;
@@ -48,7 +52,7 @@ section::after {
   z-index: 2;
   display: inline-block;
   -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+  transform: translate(-50%, -50%);
   color: #17557A;
   font : normal 400 20px/1 'Josefin Sans', sans-serif;
   letter-spacing: .1em;
@@ -134,4 +138,43 @@ section::after {
   100% {
     opacity: 0;
   }
+}
+
+#about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  height: 100vh; /* Adjust height to fit content or as needed */
+  background-color: #f0f0f0; /* Different background color for distinction */
+}
+
+#about-me .about-me-profile-container {
+  flex: 1;
+  max-width: 400px; /* Adjust as needed */
+}
+
+#about-me .about-me-profile-container img {
+  width: 80%; 
+  border-radius: 4px;
+  box-shadow: 10px -10px 10px rgba(0, 0, 0, 0.2); /* Creates the shadow effect */
+}
+
+#about-me .about-me-text-container {
+  flex: 1;
+  max-width: 600px; /* Adjust as needed */
+  padding-right: 10rem; /* Adds space between the image and text */
+  
+}
+
+.about-me-text-container h1 {  
+  font-size: 2rem; /* Adjust your font size */
+  color: #333; /* Adjust your font color */
+  margin-bottom: 1.5rem;
+}
+
+.about-me-text-container p {
+  font-size: 1.5rem; /* Adjust your font size */
+  color: #666; /* Adjust your font color */
+  margin-bottom: 1.5rem;
 }

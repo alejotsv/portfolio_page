@@ -4,7 +4,7 @@ import DownArrow from "./DownArrow";
 const Title = () => { 
 
   return(  
-    <div className="main-title-container">
+    <div className="main-title-container" id="asalas-title">
       <div className="main-title-icon">
         <img src={icon} alt="Alejandro Salas icon" />
       </div>
@@ -12,7 +12,7 @@ const Title = () => {
         <h1>Alejandro Salas</h1>
         <p>Full-Stack Software Developer</p>
       </div>
-      <DownArrow />     
+      <DownArrow />  
     </div>    
   )
 }
