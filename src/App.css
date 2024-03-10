@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+}
+
+.main-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust height as needed, 100vh for full viewport height */
+  padding: 20px;
+  background-color: #f0f0f0; /* Add your desired background color/effect */
+}
+
+.main-title-icon {
+  flex: 0 1 auto; /* adjust your image container size */
+  margin-right: 20px; /* Add space between image and text */
+}
+
+.main-title-text h1 {
+  margin: 0;
+  font-size: 2rem; /* Adjust your font size */
+  color: #333; /* Adjust your font color */
+}
+
+.main-title-text p {
+  font-size: 1.5rem; /* Adjust your font size */
+  color: #666; /* Adjust your font color */
+}
+
+/* Down arrow CSS */
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+
+section::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 80%;
+}
+
+#scroll-arrow { background: url(https://www.nxworld.net/example/css-scroll-down-button/bg03.jpg) center center / cover no-repeat;}
+
+.scroll-area a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #17557A;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.scroll-area a:hover {
+  opacity: .5;
+}
+
+#scroll-arrow a {
+  padding-top: 60px;
+}
+#scroll-arrow a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #17557A;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#scroll-arrow a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #17557A;
+  border-bottom: 1px solid #17557A;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+#scroll-arrow a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 se#4cd3fc;
+  border-radius: 100%;
+  opacity: 0;
+  -webkit-animation: sdb03 3s infinite;
+  animation: sdb03 3s infinite;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px #4CC8FC;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sdb03 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    box-shadow: 0 0 0 60px #4CC8FC;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
