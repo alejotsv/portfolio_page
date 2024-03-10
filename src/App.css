@@ -140,6 +140,8 @@ section::after {
   }
 }
 
+
+
 #about-me {
   display: flex;
   align-items: center;
@@ -177,4 +179,45 @@ section::after {
   font-size: 1.5rem; /* Adjust your font size */
   color: #666; /* Adjust your font color */
   margin-bottom: 1.5rem;
+}
+
+/* NavBar.css */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white; /* Or any color that matches your design */
+  transition: top 0.3s;
+}
+
+nav.hidden {
+  top: -100%; /* Hide the navbar */
+}
+
+nav {
+  width: 100%;
+  background-color: #333; /* Dark background for the navbar */
+  padding: 10px 0; /* Some padding top and bottom */
+}
+
+nav ul {
+  list-style: none; /* Removes default list styling */
+  display: flex;
+  justify-content: center; /* Centers the navigation links */
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px; /* Spacing between each nav item */
+}
+
+nav ul li a {
+  text-decoration: none; /* Removes underline from links */
+  color: white; /* Light text color for contrast */
+  font-size: 18px; /* Adjust the size as needed */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+  color: #4cd3fc; /* Light blue color on hover */
 }

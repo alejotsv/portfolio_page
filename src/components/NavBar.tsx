@@ -2,9 +2,9 @@ const NavBar = () => {
   return (
     <nav>
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li><a href="#asalas-title">Home</a></li>
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#">Projects</a></li>
       </ul>
     </nav>
   );
