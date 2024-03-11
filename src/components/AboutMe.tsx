@@ -1,4 +1,5 @@
 import profile_img from '../assets/asalas_2024.png';
+import DownArrow from './DownArrow';
 
 const AboutMe = () => {
   return (
@@ -10,6 +11,9 @@ const AboutMe = () => {
       </div>
       <div className="about-me-profile-container">
         <img src={profile_img} alt="Profile image"/>
+      </div>
+      <div className="about-me-arrow-container">
+        <DownArrow text="See my work" />  
       </div>
     </section>
   );

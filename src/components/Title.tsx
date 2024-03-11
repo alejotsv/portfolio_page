@@ -12,7 +12,9 @@ const Title = () => {
         <h1>Alejandro Salas</h1>
         <p>Full-Stack Software Developer</p>
       </div>
-      <DownArrow text="See more" />  
+      <div className="title-arrow-container">
+        <DownArrow text="See more" />  
+      </div>
     </div>    
   )
 }
