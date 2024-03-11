@@ -12,7 +12,7 @@ const Title = () => {
         <h1>Alejandro Salas</h1>
         <p>Full-Stack Software Developer</p>
       </div>
-      <DownArrow />  
+      <DownArrow text="See more" />  
     </div>    
   )
 }

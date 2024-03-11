@@ -1,7 +1,12 @@
-const DownArrow = () => {
+interface DownArrowProps {
+  text: string;
+}
+
+const DownArrow = (props: DownArrowProps) => {
+  
   return (
     <section id="scroll-arrow" className="scroll-area">      
-      <a href="#about-me"><span></span>Check out my work</a>
+      <a href="#about-me"><span></span>{props.text}</a>
     </section>
   );
 };
