@@ -1,10 +1,9 @@
 import Project from './Project';
 import TechBackground from './TechBackground';
 
-import projectList from '../assets/projects.json';
+import projects from '../assets/projects.ts';
 
-const MyProjects = () => {
-  const firstProject = projectList.projects[0];
+const MyProjects = () => {  
 
   return (
     <section id="my-projects">
@@ -12,7 +11,11 @@ const MyProjects = () => {
         <p><strong>My work:</strong> discover a selection of projects that showcase my explorations and accomplishments in software development. Each piece represents a step forward in my ongoing journey with technology, highlighting my commitment to learning and innovation.</p>
       </div>
       <div className="projects-content">
-        <Project project={firstProject} />
+        <div className="projects-grid">
+          {projects.map((project) => (
+              <Project key={project.title} project={project} />
+            ))}
+        </div>
         <TechBackground />
       </div>
     </section>

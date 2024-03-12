@@ -13,9 +13,6 @@ const App = () => {
       if(titleElement){
         const titleBottom = titleElement.getBoundingClientRect().bottom;
         setShowNavBar(titleBottom < 60);
-        console.log(titleBottom);
-        console.log("showNavBar", showNavBar);
-        console.log("title is below: ", titleBottom < 60);
       }
     };
 
