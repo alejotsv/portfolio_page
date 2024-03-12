@@ -224,3 +224,136 @@ nav ul li a {
 nav ul li a:hover {
   color: #4cd3fc; /* Light blue color on hover */
 }
+
+.projects-header p {
+  font-size: 1.4rem; /* Adjust your font size */
+  color: #666; /* Adjust your font color */
+}
+
+.projects-header strong {
+  font-size: 1.5rem; /* Adjust your font size */
+  color: #17557A; /* Adjust your font color */
+}
+
+#my-projects {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content";
+  grid-template-rows: auto 1fr; /* Adjust the height of the header */
+  padding: 2rem;
+  height: 100vh;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  grid-gap: 20px; /* Adjust the gap between grid items */
+}
+
+.projects-header {
+  padding: 5rem 20rem;
+  grid-area: header;  
+  text-align: justify;
+}
+
+.projects-content {
+  padding-top: 3rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  grid-area: content;
+  display: grid;
+  grid-template-areas:
+    "projects tech";
+  grid-template-columns: 2fr 1fr; /* 2/3 for projects, 1/3 for tech */
+  grid-gap: 20px; /* Adjust the gap between grid items */
+}
+
+
+/* Since we are now using grid directly in the #my-projects, we don't necessarily need .projects-content to have display: contents; */
+.projects-grid {
+  grid-area: projects;
+  /* Additional styling for projects grid here */
+}
+
+.tech-background {
+  grid-area: tech;
+  text-align: justify;  
+}
+
+.tech-background p {
+  font-size: 1.2rem; /* Adjust your font size */
+  padding: 1rem 0;
+  color: #666; /* Adjust your font color */
+}
+
+.tech-background strong {
+  font-size: 1.2rem; /* Adjust your font size */
+  color: #e45b24; /* Adjust your font color */
+}
+
+/* Add media query for responsiveness if needed */
+@media (max-width: 768px) {
+  #my-projects {
+    grid-template-areas:
+      "header"
+      "projects"
+      "tech";
+    grid-template-columns: 1fr; /* Stack items on smaller screens */
+  }
+}
+
+.project-tile {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+.project-title {
+  margin: 0.5em;
+  font-size: 1.2em;
+}
+
+.project-description {
+  margin: 0.5em;
+  font-size: 1em;
+  color: #666;
+}
+
+.project-technologies {
+  list-style: none;
+  padding: 0;
+  margin: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.project-technologies li {
+  background: #e4e4e4;
+  padding: 0.2em 0.5em;
+  border-radius: 2px;
+  font-size: 0.8em;
+}
+
+.project-link {
+  display: block;
+  text-align: center;
+  margin: 1em;
+  padding: 0.5em 0;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Hover states for the link */
+.project-link:hover {
+  background: #0056b3;
+}

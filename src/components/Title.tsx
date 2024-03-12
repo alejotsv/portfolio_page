@@ -13,7 +13,7 @@ const Title = () => {
         <p>Full-Stack Software Developer</p>
       </div>
       <div className="title-arrow-container">
-        <DownArrow text="See more" />  
+        <DownArrow text="See more" link="#about-me" />  
       </div>
     </div>    
   )

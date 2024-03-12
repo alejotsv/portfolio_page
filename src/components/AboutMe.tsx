@@ -13,7 +13,7 @@ const AboutMe = () => {
         <img src={profile_img} alt="Profile image"/>
       </div>
       <div className="about-me-arrow-container">
-        <DownArrow text="See my work" />  
+        <DownArrow text="See my work" link="#my-projects" />  
       </div>
     </section>
   );
