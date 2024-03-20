@@ -36,7 +36,15 @@ const projects: Project[] =
       "technologies": ["ReactJS", "JavaScript", "HTML", "CSS"],
       "link":"https://alejotsv.github.io/tmx-converter/",
       "github": "https://github.com/alejotsv/tmx-converter"
-    }   
+    },
+    // {
+    //   "title":"TMX Cleaner and Converter",
+    //   "thumbnail": tmxconverter,
+    //   "description":"Application to upload a TMX file and convert it into a clean CSV version.",
+    //   "technologies": ["ReactJS", "JavaScript", "HTML", "CSS"],
+    //   "link":"https://alejotsv.github.io/tmx-converter/",
+    //   "github": "https://github.com/alejotsv/tmx-converter"
+    // }     
   ]
 
 export default projects;

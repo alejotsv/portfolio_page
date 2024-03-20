@@ -12,7 +12,7 @@ const AboutMe = () => {
       <div className="about-me-profile-container">
         <img src={profile_img} alt="Profile image"/>
       </div>
-      <div className="about-me-arrow-container">
+      <div id="about-me-arrow" className="about-me-arrow-container">
         <DownArrow text="See my work" link="#my-projects" />  
       </div>
     </section>

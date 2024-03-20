@@ -11,25 +11,25 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Adjust height as needed, 100vh for full viewport height */
+  height: 100vh;
   padding: 20px;
-  background-color: #f0f0f0; /* Add your desired background color/effect */
+  background-color: #f0f0f0;
 }
 
 .main-title-icon {
-  flex: 0 1 auto; /* adjust your image container size */
-  margin-right: 20px; /* Add space between image and text */
+  flex: 0 1 auto;
+  margin-right: 20px;
 }
 
 .main-title-text h1 {
   margin: 0;
-  font-size: 2rem; /* Adjust your font size */
-  color: #333; /* Adjust your font color */
+  font-size: 2rem;
+  color: #333;
 }
 
 .main-title-text p {
-  font-size: 1.5rem; /* Adjust your font size */
-  color: #666; /* Adjust your font color */
+  font-size: 1.5rem;
+  color: #666;
 }
 
 /* Down arrow CSS */
@@ -44,7 +44,9 @@ section::after {
   height: 80%;
 }
 
-#scroll-arrow { background: url(https://www.nxworld.net/example/css-scroll-down-button/bg03.jpg) center center / cover no-repeat;}
+#scroll-arrow {
+  background: url(https://www.nxworld.net/example/css-scroll-down-button/bg03.jpg) center center / cover no-repeat;
+}
 
 .scroll-area a {
   position: absolute;
@@ -60,6 +62,7 @@ section::after {
   text-decoration: none;
   transition: opacity .3s;
 }
+
 .scroll-area a:hover {
   opacity: .5;
 }
@@ -67,6 +70,7 @@ section::after {
 #scroll-arrow a {
   padding-top: 60px;
 }
+
 #scroll-arrow a span {
   position: absolute;
   top: 0;
@@ -78,6 +82,7 @@ section::after {
   border-radius: 100%;
   box-sizing: border-box;
 }
+
 #scroll-arrow a span::after {
   position: absolute;
   top: 50%;
@@ -153,7 +158,7 @@ section::after {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  height: 100vh; /* Keep this as height to ensure the navbar functionality works */
+  height: 100vh;
   background-color: #f0f0f0;
   box-sizing: border-box;
 }
@@ -161,78 +166,79 @@ section::after {
 #about-me .about-me-profile-container {
   position: relative;
   flex: 1;
-  max-width: 400px; /* Adjust as needed */
+  max-width: 400px;
 }
 
 #about-me .about-me-profile-container img {
   width: 80%; 
   border-radius: 4px;
-  box-shadow: 10px -10px 10px rgba(0, 0, 0, 0.2); /* Creates the shadow effect */
+  box-shadow: 10px -10px 10px rgba(0, 0, 0, 0.2);
 }
 
 #about-me .about-me-text-container {
   flex: 1;
-  max-width: 600px; /* Adjust as needed */
-  padding-right: 10rem; /* Adds space between the image and text */
+  max-width: 600px;
+  padding-right: 10rem;
   
 }
 
 .about-me-text-container h1 {  
-  font-size: 2rem; /* Adjust your font size */
-  color: #333; /* Adjust your font color */
+  font-size: 2rem;
+  color: #333;
   margin-bottom: 1.5rem;
 }
 
 .about-me-text-container p {
-  font-size: 1.5rem; /* Adjust your font size */
-  color: #666; /* Adjust your font color */
+  font-size: 1.5rem;
+  color: #666;
   margin-bottom: 1.5rem;
 }
 
 /* NavBar.css */
 nav.hidden {
-  top: -100%; /* Hide the navbar */
+  top: -100%;
+  transition: top 0.3s;
 }
 
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #333; /* Dark background for the navbar */
-  padding: 10px 0; /* Some padding top and bottom */
+  background-color: #333;
+  padding: 10px 0;
   z-index: 100; /* Ensures the navbar is on top of other elements */
 }
 
 nav ul {
-  list-style: none; /* Removes default list styling */
+  list-style: none;
   display: flex;
-  justify-content: center; /* Centers the navigation links */
+  justify-content: center;
   padding: 0;
 }
 
 nav ul li {
-  margin: 0 20px; /* Spacing between each nav item */
+  margin: 0 20px;
 }
 
 nav ul li a {
-  text-decoration: none; /* Removes underline from links */
-  color: white; /* Light text color for contrast */
-  font-size: 18px; /* Adjust the size as needed */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #4cd3fc; /* Light blue color on hover */
+  color: #4cd3fc;
 }
 
 .projects-header p {
-  font-size: 1.4rem; /* Adjust your font size */
-  color: #666; /* Adjust your font color */
+  font-size: 1.4rem;
+  color: #666;
 }
 
 .projects-header strong {
-  font-size: 1.5rem; /* Adjust your font size */
-  color: #17557A; /* Adjust your font color */
+  font-size: 1.5rem;
+  color: #17557A;
 }
 
 #my-projects {
@@ -241,12 +247,12 @@ nav ul li a:hover {
   grid-template-areas:
     "header"
     "content";
-  grid-template-rows: auto 1fr; /* Adjust the height of the header */
+  grid-template-rows: auto 1fr;
   padding: 2rem;
   height: 100vh;
   background-color: #f0f0f0;
   box-sizing: border-box;
-  grid-gap: 20px; /* Adjust the gap between grid items */
+  grid-gap: 20px;
 }
 
 .projects-header {
@@ -260,27 +266,21 @@ nav ul li a:hover {
   padding-left: 5rem;
   padding-right: 5rem;
   grid-area: content;
+  display: grid; 
+  grid-template-areas: "projects";
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+
+.projects-grid {
   display: grid;
-  grid-template-areas:
-    "projects tech";
-  grid-template-columns: 2fr 1fr; /* 2/3 for projects, 1/3 for tech */
-  grid-gap: 20px; /* Adjust the gap between grid items */
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  max-width: 100%;
 }
 
-
-.projects-grid {  
-  display: grid;
-  padding-left: 13rem;
-  grid-template-columns: repeat(2, 1fr); /* Creates three columns */
-  grid-gap: 30px;
-  max-width: 700px;
-}
-
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr; /* Stack items on smaller screens */
-  }
-}
 
 .project-tile {
   border: 1px solid #ccc;
@@ -288,15 +288,15 @@ nav ul li a:hover {
   overflow: hidden;
   background: #a5caf0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-height: 350px;
-  max-width: 300px;
+  height: 350px;
+  width: 300px;
 }
 
 .project-thumbnail {
   padding: 2rem;  
   max-width: 100%;
   max-height: 50px;  
-  object-fit: cover; /* Ensures the image covers the area without stretching */
+  object-fit: cover;
   justify-content: center;
 }
 
@@ -307,6 +307,7 @@ nav ul li a:hover {
 
 .project-description {
   margin: 0.5em;
+  padding-top: 2rem;
   font-size: 1em;
   color: #666;
 }
@@ -335,28 +336,213 @@ nav ul li a:hover {
 
 
 .tech-background p {
-  font-size: 1.2rem; /* Adjust your font size */
-  /* Hover states for the link */
+  font-size: 1.2rem; 
   .project-link:hover {
     background: #0056b3;
   }
   padding: 1rem 0;
-  color: #666; /* Adjust your font color */
+  color: #666;
 }
 
 .tech-background strong {
-  font-size: 1.2rem; /* Adjust your font size */
-  color: #e45b24; /* Adjust your font color */
+  font-size: 1.2rem;
+  color: #e45b24;
 }
 
-/* Add media query for responsiveness if needed */
-@media (max-width: 768px) {
+.contact-me {
+  background-color: #333; /* Adjust the color to match your theme */
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-info h2 {
+  font-size: 2rem; /* Adjust the size as needed */
+  margin-bottom: 0.5em;
+}
+
+.contact-info p {
+  margin-bottom: 1em;
+  max-width: 400px; /* Adjust width as needed */
+}
+
+.contact-icons {
+  display: flex;
+}
+
+.contact-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; /* Space between icons */
+  width: 40px; /* Icon size */
+  height: 40px;
+}
+
+.contact-icons img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.copy-right {
+  margin-top: 20px;
+  font-size: 0.75rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) { 
+
+  .main-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height to ensure it covers the viewport */
+    padding: 0; /* Remove padding to allow justify-content to center the content truly */
+  }
+
+  .main-title-icon img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+
+  .main-title-text h1,
+  .main-title-text p {
+    text-align: center;
+    font-size: 6vw;
+  }
+
+  .title-arrow-container {
+    position: absolute;
+    bottom: 10%; /* Positioned at the bottom 10% of the container */
+    width: 100%;
+  }
+
+  .scroll-area a {
+    position: relative;
+    transform: translateX(-50%);
+  }
+
+  #about-me {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #about-me .about-me-profile-container {
+    display: none;
+  }
+
+  #about-me .about-me-text-container {
+    text-align: justify;
+    margin-top: 15%;
+    padding: 5% 0%;
+    hyphens: auto;
+  }
+
+  .about-me-arrow-container {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%, 0);
+  }
+
+  #about-me-arrow {
+    position: absolute;
+    left: 30%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  #about-me-arrow .scroll-area a {
+    position: relative;
+    transform: none;
+    z-index: 2;
+  }
+
+  nav {
+    background-color: #333;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 60px;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
   #my-projects {
-    grid-template-areas:
-      "header"
-      "projects"
-      "tech";
-    grid-template-columns: 1fr; /* Stack items on smaller screens */
+    display: block;
+    padding: 2rem;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .projects-header {
+    text-align: justify;
+    padding: 10% 5%;
+    margin-top: 15%;
+  }
+
+  .projects-content {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ensure text doesn't overflow its container */
+  .projects-header p, .project-description {
+    word-wrap: break-word;
+  }
+
+  .project-tile {
+    width: auto;
+    margin: 10px 0;
+  }
+
+  .contact-me {
+    padding: 20px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+
+  .contact-icons a {
+    width: 35px; /* Slightly smaller icon size for mobile */
+    height: 35px;
+  }
+
+  .copy-right {
+    font-size: 0.65rem;
   }
 }
-
