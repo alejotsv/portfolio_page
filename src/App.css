@@ -561,7 +561,7 @@ nav ul li a:hover {
 
 @media only screen 
   and (min-width: 770px) and (max-width: 915px) 
-  and (min-height: 320px) and (max-height: 430px) 
+  and (min-height: 285px) and (max-height: 430px) 
   and (orientation: landscape) { 
     
   #about-me {
@@ -574,7 +574,6 @@ nav ul li a:hover {
       width: 100%;
   }
 
-
   .about-me-text-container h1 {
     font-size: 2.5rem;
     font-weight: 700;   
@@ -583,7 +582,7 @@ nav ul li a:hover {
 
   .about-me-text-container p {
     font-size: 1rem;
-    line-height: 1.2;
+    line-height: 1.1;
     margin-top: 1.5rem;
   }
 
