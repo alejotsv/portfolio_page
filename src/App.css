@@ -704,6 +704,7 @@ nav ul li a:hover {
     text-align: justify;
     padding: 10% 5%;
     margin-top: 15%;
+    hyphens: auto;
   }
 
   .projects-content {
