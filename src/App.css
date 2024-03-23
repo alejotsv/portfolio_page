@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400&display=swap');
+
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -13,7 +18,8 @@ html {
   justify-content: center;
   height: 100vh;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #121212;
+  overflow: hidden;
 }
 
 .main-title-icon {
@@ -24,7 +30,7 @@ html {
 .main-title-text h1 {
   margin: 0;
   font-size: 2rem;
-  color: #333;
+  color: #f0e6e6;
 }
 
 .main-title-text p {
@@ -153,14 +159,17 @@ section::after {
 }
 
 #about-me {
+  font-family: 'Roboto', sans-serif;  
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  height: 100vh;
-  background-color: #f0f0f0;
+  height: 75vh;
+  background-color: #e2e2e2;
   box-sizing: border-box;
+  border-bottom: 2px solid #ccc;
+  box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
 #about-me .about-me-profile-container {
@@ -171,8 +180,8 @@ section::after {
 
 #about-me .about-me-profile-container img {
   width: 80%; 
-  border-radius: 4px;
-  box-shadow: 10px -10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 140px;
+  /* box-shadow: 10px -10px 10px rgba(0, 0, 0, 0.2); */
 }
 
 #about-me .about-me-text-container {
@@ -183,15 +192,20 @@ section::after {
 }
 
 .about-me-text-container h1 {  
-  font-size: 2rem;
-  color: #333;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #1f1e1e;
   margin-bottom: 1.5rem;
 }
 
 .about-me-text-container p {
-  font-size: 1.5rem;
-  color: #666;
+  font-size: 1.1rem;
+  color: #444343;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
+  max-width: 400px;
+  text-align: justify;
+  hyphens: auto;
 }
 
 /* NavBar.css */
@@ -204,7 +218,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #121212;
   padding: 10px 0;
   z-index: 100; /* Ensures the navbar is on top of other elements */
 }
@@ -233,7 +247,7 @@ nav ul li a:hover {
 
 .projects-header p {
   font-size: 1.4rem;
-  color: #666;
+  color: #1f1e1e;
 }
 
 .projects-header strong {
@@ -242,27 +256,31 @@ nav ul li a:hover {
 }
 
 #my-projects {
-  position: relative;
+  font-family: 'Roboto', sans-serif;
+  position: relative;  
   display: grid;
   grid-template-areas:
     "header"
     "content";
   grid-template-rows: auto 1fr;
   padding: 2rem;
-  height: 100vh;
+  height: 80vh;
   background-color: #f0f0f0;
   box-sizing: border-box;
   grid-gap: 20px;
+  padding-bottom: 50rem;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
-.projects-header {
+.projects-header {  
   padding: 5rem 20rem;
   grid-area: header;  
   text-align: justify;
 }
 
 .projects-content {
-  padding-top: 3rem;
+  padding-top: 3rem;  
   padding-left: 5rem;
   padding-right: 5rem;
   grid-area: content;
@@ -276,6 +294,7 @@ nav ul li a:hover {
 .projects-grid {
   display: grid;
   justify-content: center;
+  justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
   max-width: 100%;
@@ -283,13 +302,15 @@ nav ul li a:hover {
 
 
 .project-tile {
-  border: 1px solid #ccc;
+  border: 1px solid #97a5ad;  
   border-radius: 5px;
   overflow: hidden;
-  background: #a5caf0;
+  /* background: #e7e7eb; */
+  background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 350px;
-  width: 300px;
+  height: 290px;
+  width: 500px;  
+  padding: 20px;
 }
 
 .project-thumbnail {
@@ -301,8 +322,11 @@ nav ul li a:hover {
 }
 
 .project-title {
-  margin: 0.5em;
+  margin: 10px 10px 0 10px;
+  padding: 1em;
+  text-align: center;
   font-size: 1.2em;
+  background: #e7e7eb;
 }
 
 .project-description {
@@ -314,18 +338,24 @@ nav ul li a:hover {
 
 .project-technologies {
   list-style: none;
-  padding: 0;
-  margin: 0.5em;
+  padding: 1em;
+  padding-bottom: 1em;
+  margin: 0 10px 0 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  background: #e7e7eb;
 }
 
 .project-technologies li {
-  background: #e4e4e4;
+  font-family: 'Source Code Pro', monospace;
+  background: #58a5d3;
   padding: 0.2em 0.5em;
   border-radius: 2px;
-  font-size: 0.8em;
+  font-size: 0.9em;
+  color: #fff;
+  border-bottom: 3px solid #3c83ad;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .tech-background {
@@ -341,7 +371,7 @@ nav ul li a:hover {
     background: #0056b3;
   }
   padding: 1rem 0;
-  color: #666;
+  color: #fff;
 }
 
 .tech-background strong {
@@ -350,8 +380,8 @@ nav ul li a:hover {
 }
 
 .contact-me {
-  background-color: #333; /* Adjust the color to match your theme */
-  color: white;
+  background-color: #b4b0b0; /* Adjust the color to match your theme */
+  color: #1f1e1e;
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
@@ -392,6 +422,42 @@ nav ul li a:hover {
 }
 
 /* Responsive design */
+@media (max-width: 1605px){
+  #my-projects {
+    display: block;
+    padding: 2rem;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .projects-header {
+    text-align: center;
+    padding: 10% 5%;
+    margin-top: 15%;
+  }
+
+  .projects-content {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ensure text doesn't overflow its container */
+  .projects-header p, .project-description {
+    word-wrap: break-word;
+  }
+
+  .project-tile {
+    width: 500px;
+    margin: 10px 0;
+  }
+}
+
 @media (max-width: 768px) { 
 
   .main-title-container {
@@ -399,8 +465,8 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Full height to ensure it covers the viewport */
-    padding: 0; /* Remove padding to allow justify-content to center the content truly */
+    height: 100vh;
+    padding: 0;
   }
 
   .main-title-icon img {
@@ -417,7 +483,7 @@ nav ul li a:hover {
 
   .title-arrow-container {
     position: absolute;
-    bottom: 10%; /* Positioned at the bottom 10% of the container */
+    bottom: 10%;
     width: 100%;
   }
 

@@ -5,7 +5,7 @@ import emailIcon from '../assets/email_icon.png';
 
 const Contact = () => {
   return (
-    <footer className="contact-me">
+    <footer id="contact" className="contact-me">
       <div className="contact-info">
         <h2>Get in Touch</h2>
         <p>Interested in collaborating or discussing a project? Feel free to connect with me.</p>

@@ -13,7 +13,7 @@ const Project = ({project}: ProjectProps) => {
 
   return(    
     <div className="project-tile">
-      <img src={project.thumbnail} alt={project.title} className="project-thumbnail" />
+      {/* <img src={project.thumbnail} alt={project.title} className="project-thumbnail" /> */}
       <h3 className="project-title">{project.title}</h3>
       <ul className="project-technologies">
         {project.technologies.map((tech: string) => (

@@ -24,7 +24,7 @@ const projects: Project[] =
     {
       "title":"Sierpinski Triangle",
       "thumbnail": sierpinski,
-      "description":"This program automatically recreates the Sierpiński triangle following a series of simple steps, after the user selects a number of dots to be drawn (from 1 to 25,000)",
+      "description":"Automatically recreates the Sierpiński triangle when the user selects a number of dots to be drawn.",
       "technologies": ["ReactJS", "JavaScript", "HTML", "CSS", "Canvas"],
       "link":"https://alejotsv.github.io/sierpinski-triangle/",
       "github": "https://github.com/alejotsv/sierpinski-triangle"
