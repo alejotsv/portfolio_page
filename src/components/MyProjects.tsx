@@ -1,5 +1,4 @@
 import Project from './Project';
-// import TechBackground from './TechBackground';
 
 import projects from '../assets/projects.ts';
 
@@ -15,8 +14,7 @@ const MyProjects = () => {
           {projects.map((project) => (
               <Project key={project.title} project={project} />
             ))}
-        </div>
-        {/* <TechBackground /> */}
+        </div>        
       </div>
     </section>
 

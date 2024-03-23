@@ -11,7 +11,7 @@ interface ProjectProps {
 
 const Project = ({project}: ProjectProps) => {
 
-  return(    
+  return(        
     <div className="project-tile">
       {/* <img src={project.thumbnail} alt={project.title} className="project-thumbnail" /> */}
       <h3 className="project-title">{project.title}</h3>
@@ -21,7 +21,11 @@ const Project = ({project}: ProjectProps) => {
         ))}
       </ul>      
       <p className="project-description">{project.description}</p>
-    </div>       
+      <div className="project-links">
+        <a href={project.link} target="_blank" rel="noopener noreferrer">Visit the App</a>
+        <a href={project.github} target="_blank" rel="noopener noreferrer">View the source code</a>
+      </div>
+    </div>           
   )
 }
 
