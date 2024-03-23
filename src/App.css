@@ -560,7 +560,7 @@ nav ul li a:hover {
 }
 
 @media only screen 
-  and (min-width: 800px) and (max-width: 915px) 
+  and (min-width: 780px) and (max-width: 915px) 
   and (min-height: 360px) and (max-height: 412px) 
   and (orientation: landscape) { 
 
