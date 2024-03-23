@@ -12,6 +12,9 @@ const phrases = [
   "Coding is fun!",
   "I love to play guitar",
   "Cat person here",
+  "Welcome to the jungle!",
+  "React rules",
+  "No, Luke, I am your father",
   ""
 ];
 

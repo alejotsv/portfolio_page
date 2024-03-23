@@ -231,10 +231,12 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 20px;
+  margin: 0 30px;
 }
 
 nav ul li a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   text-decoration: none;
   color: white;
   font-size: 18px;
@@ -486,19 +488,20 @@ nav ul li a:hover {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .dialog-bubble {
   font-family: 'Roboto', sans-serif;
   color: #0572b1;
   position: absolute;
-  top: 15%;
-  left: 55%;
+  top: 10%;
+  left: 53%;
   transform: translateY(-50%);
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding: 10px;
+  padding: 7px;
   white-space: nowrap;  
 }
 
@@ -632,11 +635,11 @@ nav ul li a:hover {
     z-index: 2;
   }
 
-  nav {
+  nav {    
     background-color: #333;
   }
 
-  nav ul {
+  nav ul {        
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -649,7 +652,7 @@ nav ul li a:hover {
     margin: 0 10px;
   }
 
-  nav ul li a {
+  nav ul li a {    
     color: white;
     font-size: 16px;
     padding: 5px 10px;
