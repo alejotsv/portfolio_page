@@ -22,8 +22,8 @@ const Project = ({project}: ProjectProps) => {
       </ul>      
       <p className="project-description">{project.description}</p>
       <div className="project-links">
-        <a href={project.link} target="_blank" rel="noopener noreferrer">Visit the App</a>
-        <a href={project.github} target="_blank" rel="noopener noreferrer">View the source code</a>
+        <a href={project.link} target="_blank" rel="noopener noreferrer">To the App</a>
+        <a href={project.github} target="_blank" rel="noopener noreferrer" className="github-btn" >Source code</a>
       </div>
     </div>           
   )

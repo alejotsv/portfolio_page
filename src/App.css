@@ -50,9 +50,9 @@ section::after {
   height: 80%;
 }
 
-#scroll-arrow {
+/* #scroll-arrow {
   background: url(https://www.nxworld.net/example/css-scroll-down-button/bg03.jpg) center center / cover no-repeat;
-}
+} */
 
 .scroll-area a {
   position: absolute;
@@ -302,12 +302,13 @@ nav ul li a:hover {
 
 
 .project-tile {  
+  display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 10;  
   border: 1px solid #97a5ad;  
   border-radius: 5px;
-  overflow: hidden;
-  /* background: #e7e7eb; */
+  overflow: hidden;  
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 350px;
@@ -332,6 +333,7 @@ nav ul li a:hover {
 }
 
 .project-description {
+  flex-grow: 1;
   margin: 0.5em;
   padding-top: 2rem;
   font-size: 1em;
@@ -339,7 +341,7 @@ nav ul li a:hover {
 }
 
 .project-technologies {
-  list-style: none;
+  list-style: none;  
   padding: 1em;
   padding-bottom: 1em;
   margin: 0 10px 0 10px;
@@ -350,7 +352,7 @@ nav ul li a:hover {
 }
 
 .project-technologies li {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Source Code Pro', monospace;  
   background: #58a5d3;
   padding: 0.2em 0.5em;
   border-radius: 2px;
@@ -361,20 +363,38 @@ nav ul li a:hover {
 }
 
 .project-links {
+  margin-top: auto;
   text-align: right;
   margin-top: 20px;
 }
 
 .project-links a {
   display: inline-block;
+  font-weight: bold;
   margin: 0 10px;
   padding: 8px 16px;  
   color: #3c83ad;
   text-decoration: none;
+  background-color: #0572b1;
+  color: #fff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.project-links .github-btn {
+  background-color: rgb(48, 48, 49);
 }
 
 .project-links a:hover {
-  color: #0056b3; 
+  background-color: #022133;
+  color: #e0e3e6; 
 }
 
 .tech-background {
@@ -399,33 +419,51 @@ nav ul li a:hover {
 }
 
 .contact-me {
-  background-color: #b4b0b0; /* Adjust the color to match your theme */
+  font-family: 'Roboto', sans-serif;
+  background-color: #b4b0b0;
   color: #1f1e1e;
   padding: 40px 20px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
+}
+
+.info-with-icons {
+  padding-left: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
 }
 
 .contact-info h2 {
-  font-size: 2rem; /* Adjust the size as needed */
+  font-size: 2rem;
   margin-bottom: 0.5em;
+  
 }
 
 .contact-info p {
   margin-bottom: 1em;
-  max-width: 400px; /* Adjust width as needed */
+  max-width: 400px;
 }
 
-.contact-icons {
+.contact-icons {  
   display: flex;
+  flex-direction: row;
+  justify-content: center;  
 }
 
 .contact-icons a {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px; /* Space between icons */
+  margin-right: 30px; /* Space between icons */
   width: 40px; /* Icon size */
   height: 40px;
 }
@@ -435,9 +473,39 @@ nav ul li a:hover {
   max-height: 100%;
 }
 
+.avatar-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dialog-bubble {
+  font-family: 'Roboto', sans-serif;
+  color: #0572b1;
+  position: absolute;
+  top: 15%;
+  left: 55%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  white-space: nowrap;  
+}
+
 .copy-right {
   margin-top: 20px;
-  font-size: 0.75rem;
+  padding-right: 150px;
+  font-size: 1rem;
 }
 
 /* Responsive design */
@@ -465,8 +533,7 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
   }
-
-  /* Ensure text doesn't overflow its container */
+ 
   .projects-header p, .project-description {
     word-wrap: break-word;
   }
@@ -474,6 +541,18 @@ nav ul li a:hover {
   .project-tile {
     width: 500px;
     margin: 10px 0;
+  }
+
+  .dialog-bubble {
+    position: absolute;
+    top: 15%;
+    left: 65%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    white-space: nowrap;  
   }
 }
 
@@ -611,7 +690,16 @@ nav ul li a:hover {
   }
 
   .contact-me {
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
+  }
+
+  .info-with-icons,
+  .copy-right {
+    align-self: stretch;
+    text-align: center;
+    padding: 10px 0;
   }
 
   .contact-info h2 {
@@ -622,12 +710,17 @@ nav ul li a:hover {
     font-size: 0.9rem;
   }
 
-  .contact-icons a {
+  .contact-icons a {    
     width: 35px; /* Slightly smaller icon size for mobile */
     height: 35px;
   }
 
+  .avatar-container {
+    display: none;
+  }
+
   .copy-right {
     font-size: 0.65rem;
+    padding: 0;
   }
 }
