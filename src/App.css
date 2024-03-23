@@ -586,6 +586,12 @@ nav ul li a:hover {
     margin-top: 1.5rem;
   }
 
+  .dialog-bubble {
+    position: absolute;
+    top: 1%;
+    left: 75%;
+  }
+
 }
 
 @media (max-width: 768px) { 
