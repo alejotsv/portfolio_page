@@ -2,3 +2,4 @@
   from = "/aws.html"
   to = "/hello.html"
   status = 301
+  force = true
