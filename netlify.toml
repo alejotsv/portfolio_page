@@ -3,3 +3,9 @@
   to = "/hello.html"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/aws"
+  to = "/hello.html"
+  status = 301
+  force = true
