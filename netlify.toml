@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/aws.html"
+  to = "/hello.html"
+  status = 301
