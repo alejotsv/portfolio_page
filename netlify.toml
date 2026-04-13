@@ -1,11 +1,11 @@
 [[redirects]]
   from = "/aws.html"
-  to = "/hello.html"
+  to = "/hello"
   status = 301
   force = true
 
 [[redirects]]
   from = "/aws"
-  to = "/hello.html"
+  to = "/hello"
   status = 301
   force = true
